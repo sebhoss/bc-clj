@@ -17,10 +17,10 @@
                                             WhirlpoolDigest)
            org.bouncycastle.crypto.Digest))
 
-(defn- digest [digest input]
-  (.update digest input 0 (alength input))
-  (let [result (byte-array (.getDigestSize digest))]
-      (.doFinal digest result 0)
+(defn- digest [^Digest digestToUse ^bytes input]
+  (.update digestToUse input 0 (alength input))
+  (let [result (byte-array (.getDigestSize digestToUse))]
+      (.doFinal digestToUse result 0)
       result))
 
 (defn gost3411 [bytes]
