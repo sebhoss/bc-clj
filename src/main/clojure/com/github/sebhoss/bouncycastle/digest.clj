@@ -23,7 +23,7 @@
       (.doFinal digestToUse result 0)
       result))
 
-(defn gost3411 [bytes]
+(defn gost [bytes]
   (digest (GOST3411Digest.) bytes))
 
 (defn md2 [bytes]
