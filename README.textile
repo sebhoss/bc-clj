@@ -38,3 +38,5 @@ p. In case you're looking for something else, try:
 * https://bitbucket.org/tebeka/clj-digest
 * https://github.com/ray1729/clj-message-digest
 * https://github.com/franks42/clj.security.message-digest
+* https://github.com/xsc/pandect
+
