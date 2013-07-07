@@ -35,6 +35,6 @@ h2. Alternatives
 
 p. In case you're looking for something else, try:
 
-* https://github.com/flatland/clojail
 * https://bitbucket.org/tebeka/clj-digest
-
+* https://github.com/ray1729/clj-message-digest
+* https://github.com/franks42/clj.security.message-digest
