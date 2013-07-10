@@ -60,9 +60,15 @@
       <version>1.5.1</version>
     </dependency>
     <dependency>
-    	<groupId>org.bouncycastle</groupId>
-    	<artifactId>bcprov-jdk15on</artifactId>
-    	<version>1.49</version>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcprov-jdk15on</artifactId>
+      <version>1.49</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.sebhoss</groupId>
+      <artifactId>bootstrap-clj</artifactId>
+      <version>1.0.1</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

@@ -5,7 +5,7 @@
 (require '[com.github.sebhoss.bootstrap.repl :refer :all])
 
 ; Load project namespaces
-(load-namespaces #".*?bouncycastle")
+(load-namespaces #".*?bc-clj")
 
 ; 'clojure.test', 'clojure.repl' and 'clojure.tools.namespace.repl' support
 (load-helpers)
