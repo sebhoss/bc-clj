@@ -8,7 +8,7 @@
 
 ; Load project namespaces
 (require '(com.github.sebhoss.bouncycastle [digest :as digest]
-                                   [digest-test :as digest-test]))
+                                           [digest-test :as digest-test]))
 
 ; 'clojure.test', 'clojure.repl' and 'clojure.tools.namespace.repl' support
 (require '[clojure.tools.namespace.repl :refer :all])
