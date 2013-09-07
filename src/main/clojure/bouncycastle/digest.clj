@@ -47,11 +47,10 @@
                                          (count "Digest")))]
     (clojure.string/lower-case algo-name)))
 
-(defmacro def-digests []
+(defmacro ^:private def-digests []
   `(do 
      ~@(for [algorithm digests
             :let [name (symbol (extract-name algorithm))]]
         `(defn ~name [input#]
            (digest (new ~algorithm) input#)))))
-
 (def-digests)
