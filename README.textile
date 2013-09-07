@@ -5,7 +5,7 @@ p. Clojure wrapper for "Bouncy Castle":http://www.bouncycastle.org/
 
 h2. Usage
 
-p. The library lives under @com.github.sebhoss.bouncycastle@ and is divided into the following namespaces and functions:
+p. The library lives under @bouncycastle@ and is divided into the following namespaces and functions:
 
 h3. digest/
 

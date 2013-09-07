@@ -6,8 +6,8 @@
 ; http://www.wtfpl.net/ for more details.
 ;
 
-(ns com.github.sebhoss.bouncycastle.digest-test
-  (:require [com.github.sebhoss.bouncycastle.digest :refer :all]
+(ns bouncycastle.digest-test
+  (:require [bouncycastle.digest :refer :all]
             [clojure.test :refer [deftest are]]))
 
 (def zero (.getBytes "" "UTF8"))

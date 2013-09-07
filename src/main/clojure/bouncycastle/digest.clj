@@ -6,7 +6,7 @@
 ; http://www.wtfpl.net/ for more details.
 ;
 
-(ns com.github.sebhoss.bouncycastle.digest
+(ns bouncycastle.digest
   (:import (org.bouncycastle.crypto.digests GOST3411Digest
                                             MD2Digest
                                             MD4Digest

@@ -7,7 +7,7 @@
 ;
 
 ; Load project namespaces
-(require '(com.github.sebhoss.bouncycastle [digest :as digest]
+(require '(bouncycastle [digest :as digest]
                                            [digest-test :as digest-test]))
 
 ; 'clojure.test', 'clojure.repl' and 'clojure.tools.namespace.repl' support
@@ -22,7 +22,7 @@
    Examples:
      * (rat)          - Run all tests in all project namespaces
      * (rat \"digest\")   - Run all tests in the digest/-namespace"
-  ([] (run-all-tests #"com.github.sebhoss.bouncycastle.*-test"))
+  ([] (run-all-tests #"bouncycastle.*-test"))
   ([namespace] (run-all-tests
-                 (re-pattern (format "com.github.sebhoss.bouncycastle.%s-test"
+                 (re-pattern (format "bouncycastle.%s-test"
                                      namespace)))))
