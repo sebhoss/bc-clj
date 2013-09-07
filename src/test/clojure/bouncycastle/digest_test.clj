@@ -13,6 +13,9 @@
 (def standard (.getBytes "The quick brown fox jumps over the lazy dog" "UTF8"))
 (def derivative (.getBytes "The quick brown fox jumps over the lazy cog" "UTF8"))
 
+(defn hexify [bytes]
+  (apply str (map (partial format "%02x") bytes)))
+
 (deftest digest-test
   (are [digest input expected] (= expected (hexify (digest input)))
        gost3411   zero       "981e5f3ca30c841487830f84fb433e13ac1101569b9c13584ac483234cd656c0"

@@ -31,9 +31,6 @@
       (.doFinal digestToUse result 0)
       result))
 
-(defn hexify [bytes]
-  (apply str (map (partial format "%02x") bytes)))
-
 (def ^:private digests [GOST3411Digest
                         MD2Digest MD4Digest MD5Digest
                         RIPEMD128Digest RIPEMD160Digest RIPEMD256Digest RIPEMD320Digest
