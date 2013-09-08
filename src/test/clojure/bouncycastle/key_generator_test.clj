@@ -16,6 +16,8 @@
     (is (not-nil? (generate-key "AES"))))
   (testing "with given key-strength"
     (is (not-nil? (generate-key "AES" :strength 192))))
+  (testing "with key-strength and given randomness"
+    (is (not-nil? (generate-key "AES" :strength 192 :random (java.security.SecureRandom.)))))
   (testing "with required standard algorithms"
     ; see http://docs.oracle.com/javase/7/docs/technotes/guides/security/StandardNames.html#KeyGenerator
     (is (not-nil? (generate-key "AES")))

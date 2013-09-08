@@ -11,14 +11,26 @@
            java.security.KeyPairGenerator
            org.bouncycastle.jce.provider.BouncyCastleProvider))
 
-(defn generate-key [algorithm & {:keys [strength]}]
-  (let [generator (KeyGenerator/getInstance algorithm (BouncyCastleProvider.))]
-    (if strength
-      (-> generator (.init strength)))
-    (-> generator (.generateKey))))
+(defn- generate [create-generator initialize-strength initialize-random create-key
+                 & {:keys [strength random]}]
+  (let [generator (create-generator (BouncyCastleProvider.))]
+    (cond
+      (and strength random) (initialize-random generator)
+      strength              (initialize-strength generator))
+    (create-key generator)))
 
-(defn generate-keypair [algorithm & {:keys [strength]}]
-  (let [generator (KeyPairGenerator/getInstance algorithm (BouncyCastleProvider.))]
-    (if strength
-      (-> generator (.initialize strength)))
-    (-> generator (.generateKeyPair))))
+(defn generate-key [algorithm & {:keys [strength random]}]
+  (generate #(KeyGenerator/getInstance algorithm %)
+            #(.init % strength)
+            #(.init % strength random)
+            #(.generateKey %)
+            :strength strength
+            :random random))
+
+(defn generate-keypair [algorithm & {:keys [strength random]}]
+  (generate #(KeyPairGenerator/getInstance algorithm %)
+            #(.initialize % strength)
+            #(.initialize % strength random)
+            #(.generateKeyPair %)
+            :strength strength
+            :random random))
