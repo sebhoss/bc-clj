@@ -15,6 +15,10 @@ h3. hmac/
 
 p. HMAC implementation based on the digests defined above. Again all functions operate on byte-arrays. Take a look at the "tests":https://github.com/sebhoss/bc-clj/blob/master/src/test/clojure/bouncycastle/hmac_test.clj for details.
 
+h3. encoding/
+
+p. Provides functions to encode byte-arrays into a @hex@- or @base64@ string.
+
 h2. Integration
 
 h3. Maven
