@@ -8,6 +8,7 @@
 (ns bouncycastle.key-generator
   "Wrapper around key-generators provided by Bouncy Castle."
   (:import javax.crypto.KeyGenerator
+           java.security.KeyPairGenerator
            org.bouncycastle.jce.provider.BouncyCastleProvider))
 
 (defn generate-key [algorithm & {:keys [strength]}]
@@ -15,3 +16,9 @@
     (if strength
       (-> generator (.init strength)))
     (-> generator (.generateKey))))
+
+(defn generate-keypair [algorithm & {:keys [strength]}]
+  (let [generator (KeyPairGenerator/getInstance algorithm (BouncyCastleProvider.))]
+    (if strength
+      (-> generator (.initialize strength)))
+    (-> generator (.generateKeyPair))))

@@ -21,7 +21,7 @@ p. Provides functions to encode byte-arrays into a @hex@- or @base64@ string.
 
 h3. key-generator/
 
-p. Provides @(generate-key)@ which needs an algorithm-name and optionally the key-strength in bit. The "tests":https://github.com/sebhoss/bc-clj/blob/master/src/test/clojure/bouncycastle/key_generator_test.clj show how to use the function.
+p. Provides @(generate-key)@ to generate a symmetric key and @(generate-keypair)@ to generate a public/private key-pair. Both need an algorithm-name and optionally the key-strength in bit. The "tests":https://github.com/sebhoss/bc-clj/blob/master/src/test/clojure/bouncycastle/key_generator_test.clj show how to use the function.
 
 h2. Integration
 
