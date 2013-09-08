@@ -41,7 +41,7 @@
                     TigerDigest
                     WhirlpoolDigest])
 
-(defn extract-digest-name [class]
+(defn extract-digest-name [^Class class]
   (let [simple-name (.getSimpleName class)
         algo-name (subs simple-name 0 (- (count simple-name)
                                          (count "Digest")))]
