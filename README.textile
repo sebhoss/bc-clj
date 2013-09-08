@@ -11,6 +11,10 @@ h3. digest/
 
 p. Digests such as @gost3411@, @md2@, @md4@, @md5@, @ripemd128@, @ripemd160@, @ripemd256@, @ripemd320@, @sha1@, @sha224@, @sha256@, @sha384@, @sha512@, @sha3@, @tiger@, @whirepool@. All functions expect an byte-array as input and return a new byte-array as output. Have a look at the "tests":https://github.com/sebhoss/bc-clj/blob/master/src/test/clojure/bouncycastle/digest_test.clj to see how these functions work.
 
+h3. hmac/
+
+p. HMAC implementation based on the digests defined above. Again all functions operate on byte-arrays. Take a look at the "tests":https://github.com/sebhoss/bc-clj/blob/master/src/test/clojure/bouncycastle/hmac_test.clj for details.
+
 h2. Integration
 
 h3. Maven
