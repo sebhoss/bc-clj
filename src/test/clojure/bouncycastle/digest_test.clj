@@ -7,17 +7,15 @@
 
 (ns bouncycastle.digest-test
   (:require [bouncycastle.digest :refer :all]
+            [bouncycastle.encoding :refer :all]
             [clojure.test :refer [deftest are]]))
 
 (def zero (.getBytes "" "UTF8"))
 (def standard (.getBytes "The quick brown fox jumps over the lazy dog" "UTF8"))
 (def derivative (.getBytes "The quick brown fox jumps over the lazy cog" "UTF8"))
 
-(defn hexify [bytes]
-  (apply str (map (partial format "%02x") bytes)))
-
 (deftest digest-test
-  (are [digest input expected] (= expected (hexify (digest input)))
+  (are [digest input expected] (= expected (hex (digest input)))
        gost3411   zero       "981e5f3ca30c841487830f84fb433e13ac1101569b9c13584ac483234cd656c0"
        gost3411   standard   "9004294a361a508c586fe53d1f1b02746765e71b765472786e4770d565830a76"
        gost3411   derivative "a93124f5bf2c6d83c3bbf722bc55569310245ca5957541f4dbd7dfaf8137e6f2"
