@@ -9,7 +9,7 @@
   (:require [clojure.test :refer [deftest are]]
             [bouncycastle.hmac :refer :all]
             [bouncycastle.digest-test :as inputs]
-            [bouncycastle.encoding :refer :all]))
+            [bouncycastle.encoding :refer [hex]]))
 
 (def zero (.getBytes "" "UTF8"))
 (def simple (.getBytes "key" "UTF8"))

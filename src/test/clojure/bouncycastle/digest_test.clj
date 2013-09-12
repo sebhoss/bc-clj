@@ -7,7 +7,7 @@
 
 (ns bouncycastle.digest-test
   (:require [bouncycastle.digest :refer :all]
-            [bouncycastle.encoding :refer :all]
+            [bouncycastle.encoding :refer [hex]]
             [clojure.test :refer [deftest are]]))
 
 (def zero (.getBytes "" "UTF8"))
