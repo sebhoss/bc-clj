@@ -1,4 +1,4 @@
-h1. bc-clj "!https://travis-ci.org/sebhoss/bc-clj.png!":https://travis-ci.org/sebhoss/bc-clj "!https://www.ohloh.net/p/bc-clj/widgets/project_thin_badge.gif!":https://www.ohloh.net/p/bc-clj/
+h1. bc-clj "!https://travis-ci.org/sebhoss/bc-clj.png!":https://travis-ci.org/sebhoss/bc-clj "!http://www.ohloh.net/p/bc-clj/widgets/project_thin_badge.gif!":https://www.ohloh.net/p/bc-clj/
 
 p. Clojure wrapper for "Bouncy Castle":http://www.bouncycastle.org/ 
 
